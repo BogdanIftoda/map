@@ -72,10 +72,14 @@
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1,
-            accessToken: 'pk.eyJ1IjoiYm9nZGFuaWZ0b2RhIiwiYSI6ImNrenY2bzZ6azFkenEydW1veTU1YnpseXgifQ.2shtKOHK8ve_OA0xkHanFg'
+            accessToken: 'pk.eyJ1IjoiYm9nZGFuaWZ0b2RhIiwiYSI6ImNrenY2bzZ6azFkenEydW1veTU1YnpseXgifQ.2shtKOHK8ve_OA0xkHanFg',
+            dragRotate: false,
+            dragPan: false,
         }).addTo(map);
         L.geoJson(statesData).addTo(map);
-
+        map.on('click', (e) => {
+            console.log(e);
+        });
 
 
     </script>
